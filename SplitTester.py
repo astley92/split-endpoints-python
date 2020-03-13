@@ -4,12 +4,14 @@ import json
 class Split_API_Request:
     def __init__(self, token, mode="sandbox"):
         self.token = token
+
         if mode == "sandbox":
             self.base_url = "api.sandbox.split.cash"
         elif mode == "production":
             self.base_url = "api.split.cash"
         else:
             raise Exception("Not a valid mode.")
+
         self.conn = http.client.HTTPSConnection(self.base_url)
         self.headers = {
                         'content-type': "application/json",

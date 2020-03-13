@@ -2,10 +2,12 @@ from SplitTester import Split_API_Request
 import datetime
 
 # Set token
-token = "add_token_here"
+token = "token_here"
 
 # Create request object
-req = Split_API_Request(token)
+req = Split_API_Request(token) # Sandbox
+# req = Split_API_Request(token, mode="production") # Sandbox
+
 
 # # LIST ALL CONTACTS
 # req.execute("/contacts")
